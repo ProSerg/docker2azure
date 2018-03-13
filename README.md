@@ -100,7 +100,18 @@ Then create resource group
 ```
 az group create -n <resource group name>
 ```
+#### Get Scope ID
 
+It need for creation service principal
+```
+az group list
+```
+
+#TODO NEED A PICTION
+
+```
+az group list --query "[?name=='resource_group_name']"
+```
 #### Create Service Principal
 
 For service principal (SP) we need to specify a scope. In our case it will be newly created resource group.
